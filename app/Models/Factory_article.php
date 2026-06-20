@@ -17,4 +17,9 @@ class Factory_article extends Model
     {
         return $this->belongsTo(Article::class);
     }
+
+    public function factories()
+    {
+        return $this->hasMany(Factory::class);
+    }
 }
