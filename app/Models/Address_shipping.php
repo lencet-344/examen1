@@ -15,13 +15,13 @@ class Address_shipping extends Model
         "state_address",
     ];
 
-    public function customers()
+    public function customer()
     {
-        return $this->hasOne(Customer::class);
+        return $this->belongsTo(Customer::class);
     }
 
-    public function orders()
+    public function order()
     {
-        return $this->hasOne(Order::class);
+        return $this->belongsTo(Order::class);
     }
 }

@@ -12,8 +12,8 @@ class Factory_article extends Model
         "date_estimated"
     ];
 
-    public function articles()
+    public function article()
     {
-        return $this->hasOne(Article::class);
+        return $this->belongsTo(Article::class);
     }
 }
