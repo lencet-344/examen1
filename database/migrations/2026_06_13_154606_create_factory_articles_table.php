@@ -17,8 +17,8 @@ return new class extends Migration
             $table->integer("negotiation_cost")->unsigned();
             $table->date("date_estimated");
 
-            $table->integer("articles_id")->unsigned();
-            $table->foreign("articles_id")->references("id")->on("articles")->onDelete("cascade")->onUpdate("cascade");
+            $table->integer("article_id")->unsigned();
+            $table->foreign("article_id")->references("id")->on("articles")->onDelete("cascade")->onUpdate("cascade");
 
 
             $table->timestamps();
