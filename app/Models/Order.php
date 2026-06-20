@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $fillable=[
+        "id_customer",
+        "id_address_shipping",
         "date_create",
         "subtotal",
         "mount_tax",
@@ -15,12 +17,12 @@ class Order extends Model
         "state-order"
     ];
 
-    public function customers()
+    public function customer()
     {
-        return $this->hasOne(Customer::class);
+        return $this->belongsTo(Customer::class);
     }
 
-    public function address_shipping()
+    public function address_shippings()
     {
         return $this->hasMany(Address_shipping::class);
     }

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Address_shipping extends Model
 {
     protected $fillable=[
+        "id_customer",
         "number",
         "street",
         "neighborhood",
