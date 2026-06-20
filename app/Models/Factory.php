@@ -14,4 +14,9 @@ class Factory extends Model
         "address",
         "state_supplier"
     ];
+
+    public function factory_article()
+    {
+        return $this->belongsTo(Factory_article::class);
+    }
 }
