@@ -23,6 +23,7 @@ class Factory_articleRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'article_id'=>"required",
             'current_stock'=>'integer|required|unsigned',
             'negotiation_cost'=>'integer|required|unsigned',
             'date_estimated'=>"date|required|",
@@ -32,6 +33,8 @@ class Factory_articleRequest extends FormRequest
     public function messages():array
     {
         return[
+            
+            'article_id.required'=>'El campo es requerido',
 
             'current_stock.integer'=>'El campo solo permite numeros enteros',
             'current_stock.required'=>'El campo es requerido',
