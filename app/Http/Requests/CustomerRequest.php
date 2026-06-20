@@ -38,40 +38,40 @@ class CustomerRequest extends FormRequest
 
     {
         return[
-            
+
             'name.string'=>'El nombre solo permite caracteres',
-            'required.string'=>'El campo es requerido',
-            'min.integer'=>'El minimo de caractesres es 3',
-            'max.integer'=>'El maximo de caracteres es 20',
+            'name.required'=>'El campo es requerido',
+            'name.min'=>'El minimo de caractesres es 3',
+            'name.max'=>'El maximo de caracteres es 20',
 
             'email.string'=>'El correo solo permite caracteres',
-            'required.string'=>'El campo es requerido',
-            'min.integer'=>'El minimo de caractesres es 3',
-            'max.integer'=>'El maximo de caracteres es 30',
+            'email.required'=>'El campo es requerido',
+            'email.min'=>'El minimo de caractesres es 3',
+            'email.max'=>'El maximo de caracteres es 30',
 
             'telephone.integer'=>'El campo solo permite numeros enteros',
-            'required.string'=>'El campo es requerido',
-            'unique.integer'=>'El numero debe ser unico',
+            'telephone.required'=>'El campo es requerido',
+            'telephone.unique'=>'El numero debe ser unico',
 
             'balance.decimal'=>'El campo permite numeros',
-            'required.string'=>'El campo es requerido',
+            'balance.required'=>'El campo es requerido',
 
             'credit_balance.decimal'=>'El campo permite numeros',
-            'required.string'=>'El campo es requerido',
+            'credit_balance.required'=>'El campo es requerido',
 
             'discount.string'=>'El campo descuento solo permite caracteres',
-            'required.string'=>'El campo es requerido',
-            'min.integer'=>'El minimo de caractesres es 3',
-            'max.integer'=>'El maximo de caracteres es 25',
+            'discount.required'=>'El campo es requerido',
+            'discount.min'=>'El minimo de caractesres es 3',
+            'discount.max'=>'El maximo de caracteres es 25',
 
             'date_record.date'=>'El campo solo permite fecha de ingreso',
-            'required.string'=>'El campo es requerido',
+            'date_record.required'=>'El campo es requerido',
             'date.date'=>'fecha',
 
             'state_customer.string'=>'El campo solo permite caracteres',
-            'required.string'=>'El campo es requerido',
-            'min.integer'=>'El minimo de caractesres es 3',
-            'max.integer'=>'El maximo de caracteres es 30',
+            'state_customer.required'=>'El campo es requerido',
+            'state_customer.min'=>'El minimo de caractesres es 3',
+            'state_customer.max'=>'El maximo de caracteres es 30',
 
             
         ];

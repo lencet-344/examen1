@@ -36,30 +36,29 @@ class ArticleRequest extends FormRequest
     {
         return[
             'code_internal.string'=>'El campo solo permite caracteres',
-            'required.string'=>'El campo es requerido',
-            'min.integer'=>'El minimo de caractesres es 4',
-            'max.integer'=>'El maximo de caracteres es 20',
+            'code_internal.required'=>'El campo es requerido',
+            'code_internal.min'=>'El minimo de caractesres es 4',
+            'code_internal.max'=>'El maximo de caracteres es 20',
 
             'description.string'=>'La descripcion solo permite caracteres',
-            'required.string'=>'El campo es requerido',
+            'description.required'=>'El campo es requerido',
             'min.integer'=>'El minimo de caractesres es 3',
             'max.integer'=>'El maximo de caracteres es 50',
 
             'price.decimal'=>'El campo permite numeros',
-            'required.string'=>'El campo es requerido',
+            'price.required'=>'El campo es requerido',
 
             'cost.decimal'=>'El campo permite numeros',
-            'required.string'=>'El campo es requerido',
+            'cost.required'=>'El campo es requerido',
 
             'state.string'=>'El estado solo permite caracteres',
-            'required.string'=>'El campo es requerido',
-            'min.integer'=>'El minimo de caractesres es 3',
-            'max.integer'=>'El maximo de caracteres es 30',
+            'state.required'=>'El campo es requerido',
+            'state.min'=>'El minimo de caractesres es 3',
+            'state.max'=>'El maximo de caracteres es 30',
 
             'date_record.date'=>'El campo solo permite fecha de ingreso',
-            'required.string'=>'El campo es requerido',
-            'date.date'=>'fecha',
-
+            'date_record.required'=>'El campo es requerido',
+            
 
         ];
     }
