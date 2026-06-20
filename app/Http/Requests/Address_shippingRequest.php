@@ -23,6 +23,7 @@ class Address_shippingRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'customer_id'=>"required",
             'number'=>"decimal|required",
             'street'=>"string|required||min:3|max:20",
             'neighborhood'=>"string|required||min:3|max:20",
@@ -36,6 +37,8 @@ class Address_shippingRequest extends FormRequest
     public function messages():array
     {
         return[
+            'customer_id.required'=>'El campo es requerido',
+
             'number.decimal'=>'El campo permite numeros',
             'number.required'=>'El campo es requerido',
 
