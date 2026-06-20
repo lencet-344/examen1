@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string("reference_location", 30);
             $table->string("state_address", 30);
 
-            $table->integer("customers_id")->unsigned();
-            $table->foreign("customers_id")->references("id")->on("customers")->onDelete("cascade")->onUpdate("cascade");
+            $table->integer("customer_id")->unsigned();
+            $table->foreign("customer_id")->references("id")->on("customers")->onDelete("cascade")->onUpdate("cascade");
 
 
             $table->timestamps();

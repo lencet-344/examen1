@@ -20,11 +20,11 @@ return new class extends Migration
             $table->string("additional_notes", 30);
             $table->string("state_order", 20);
 
-            $table->integer("customers_id")->unsigned();
-            $table->foreign("customers_id")->references("id")->on("customers")->onDelete("cascade")->onUpdate("cascade");
+            $table->integer("customer_id")->unsigned();
+            $table->foreign("customer_id")->references("id")->on("customers")->onDelete("cascade")->onUpdate("cascade");
 
-            $table->integer("address_shippings_id")->unsigned();
-            $table->foreign("address_shippings_id")->references("id")->on("address_shippings")->onDelete("cascade")->onUpdate("cascade");
+            $table->integer("address_shipping_id")->unsigned();
+            $table->foreign("address_shipping_id")->references("id")->on("address_shippings")->onDelete("cascade")->onUpdate("cascade");
 
 
             $table->timestamps();
