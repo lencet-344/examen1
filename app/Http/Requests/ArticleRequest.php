@@ -28,7 +28,7 @@ class ArticleRequest extends FormRequest
             'price'=>"decimal|required",
             'cost'=>"decimal|required",
             'state'=>"string|required||min:3|max:30",
-            'date_record'=>"date|required|date",
+            'date_record'=>"date|required",
         ];
     }
 

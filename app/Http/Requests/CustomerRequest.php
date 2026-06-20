@@ -29,7 +29,7 @@ class CustomerRequest extends FormRequest
             'balance'=>"decimal|required",
             'credit_balance'=>"decimal|required",
             'discount'=>"string|required||min:3|max:25",
-            'date_record'=>"date|required||date",
+            'date_record'=>"date|required|",
             'state_customer'=>"string|required||min:3|max:30",
         ];
     }
