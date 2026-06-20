@@ -23,6 +23,7 @@ class Order_lineRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'article_id'=>"required",
             'quantity'=>'integer|required|unsigned',
             'price'=>"decimal|required",
             'subtotal_line'=>"decimal|required",
@@ -32,6 +33,8 @@ class Order_lineRequest extends FormRequest
     public function messages():array
     {
         return[
+            
+            'article_id.required'=>'El campo es requerido',
 
             'quantity.integer'=>'El campo solo permite numeros enteros',
             'quantity.required'=>'El campo es requerido',
