@@ -23,6 +23,8 @@ class OrderRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'customer_id'=>"required",
+            'id_address_shipping'=>"required",
             'date_create'=>"date|required",
             'subtotal'=>"decimal|required",
             'iva'=>"decimal|required",
@@ -35,6 +37,9 @@ class OrderRequest extends FormRequest
     public function messages():array
     {
         return[
+            'customer_id.required'=>'El campo es requerido',
+            
+            'id_address_shipping.required'=>'El campo es requerido',
 
             'date_create.date'=>'El campo solo permite fecha de creacion',
             'date_create.required'=>'El campo es requerido',
