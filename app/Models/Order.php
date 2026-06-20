@@ -11,7 +11,7 @@ class Order extends Model
         "id_address_shipping",
         "date_create",
         "subtotal",
-        "mount_tax",
+        "iva",
         "total_general",
         "additional_notes",
         "state-order"

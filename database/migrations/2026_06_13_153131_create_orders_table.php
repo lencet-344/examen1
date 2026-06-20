@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments("id");
             $table->timestamp("date_create");
             $table->decimal("subtotal", 10, 2);
-            $table->decimal("mount_tax", 10, 2);
+            $table->decimal("iva", 10, 2);
             $table->decimal("total_general", 10, 2);
             $table->string("additional_notes", 30);
             $table->string("state_order", 20);
