@@ -23,7 +23,7 @@ class CustomerController extends Controller
     public function create()
     {
         $customer = new Customer();
-        return view("customer.create", compact("customer"));
+        return view("customers.create", compact("customer"));
     }
 
     /**
@@ -41,7 +41,7 @@ class CustomerController extends Controller
     public function show(string $id)
     {
         $customer = Customer::findOrFail($id);
-        return view("Customer.show", compact("customer"));
+        return view("customers.show", compact("customer"));
     }
 
     /**
@@ -50,7 +50,7 @@ class CustomerController extends Controller
     public function edit(string $id)
     {
         $customer = Customer::findOrFail($id);
-        return view("Customer.edit", compact("customer"));
+        return view("customers.edit", compact("customer"));
     }
 
     /**
