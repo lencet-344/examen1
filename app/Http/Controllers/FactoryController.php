@@ -22,8 +22,8 @@ class FactoryController extends Controller
      */
     public function create()
     {
-        $factory = new Factory();
-        return view("factories.create", compact("factory"));
+        $factories = new Factory();
+        return view("factories.create", compact("factories"));
     }
 
     /**

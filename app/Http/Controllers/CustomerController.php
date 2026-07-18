@@ -22,8 +22,8 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        $customer = new Customer();
-        return view("customers.create", compact("customer"));
+        $customers = new Customer();
+        return view("customers.create", compact("customers"));
     }
 
     /**
