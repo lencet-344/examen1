@@ -25,8 +25,8 @@ class ArticleRequest extends FormRequest
         return [
             'code_internal'=>"string|required||min:4|max:20",
             'description'=>"string|required||min:3|max:50",
-            'price'=>"decimal|required",
-            'cost'=>"decimal|required",
+            'price'=>"required",
+            'cost'=>"required",
             'state'=>"string|required||min:3|max:30",
             'date_record'=>"date|required",
         ];
@@ -45,10 +45,10 @@ class ArticleRequest extends FormRequest
             'min.integer'=>'El minimo de caractesres es 3',
             'max.integer'=>'El maximo de caracteres es 50',
 
-            'price.decimal'=>'El campo permite numeros',
+           
             'price.required'=>'El campo es requerido',
 
-            'cost.decimal'=>'El campo permite numeros',
+           
             'cost.required'=>'El campo es requerido',
 
             'state.string'=>'El estado solo permite caracteres',

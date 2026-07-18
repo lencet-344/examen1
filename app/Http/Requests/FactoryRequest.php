@@ -23,12 +23,12 @@ class FactoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'company_name'=>'string|required|min:3|max:30',
-            'identification_card'=>'string|required|min:3|max:30',
-            'telephone'=>'integer|required|unique',
-            'email'=>'string|required|min:3|max:20',
-            'address'=>'string|required|min:3|max:40',
-            'state_supplier'=>'string|required|min:3|max:50',
+            'company_name'=>'string', 'required','min:3','max:30',
+            'identification_card'=>'string','required','min:3','max:30',
+            'telephone'=>'integer','required','unique',
+            'email'=>'string','required','min:3','max:20',
+            'address'=>'string','required','min:3','max:40',
+            'state_supplier'=>'string','required','min:3','max:50',
         ];
     }
 

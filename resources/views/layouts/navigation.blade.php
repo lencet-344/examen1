@@ -14,33 +14,28 @@
                     </x-nav-link>
                     <x-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.*')">
                         {{ __('Clientes') }}
-
                     </x-nav-link>
+                    
                     <x-nav-link :href="route('factories.index')" :active="request()->routeIs('factories.*')">
                         {{ __('Fábricas') }}
                     </x-nav-link>
 
-                    </x-nav-link>
                     <x-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.*')">
                         {{ __('Artículos') }}
                     </x-nav-link>
 
-                    </x-nav-link>
                     <x-nav-link :href="route('address_shippings.index')" :active="request()->routeIs('address_shippings.*')">
                         {{ __('Direcciones de Envío') }}
                     </x-nav-link>
 
-                    </x-nav-link>
                     <x-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.*')">
                         {{ __('Pedidos') }}
                     </x-nav-link>
 
-                    </x-nav-link>
                     <x-nav-link :href="route('order_lines.index')" :active="request()->routeIs('order_lines.*')">
                         {{ __('Líneas de Pedido') }}
                     </x-nav-link>
 
-                    </x-nav-link>
                     <x-nav-link :href="route('factory_articles.index')" :active="request()->routeIs('factory_articles.*')">
                         {{ __('Artículos de Fábrica') }}
                     </x-nav-link>
@@ -107,12 +102,34 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.*')">
-                {{ __('Categorías') }}
+            <x-responsive-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.*')">
+                {{ __('Clientes') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('notes.index')" :active="request()->routeIs('notes.*')">
-                {{ __('Notas') }}
+
+            <x-responsive-nav-link :href="route('factories.index')" :active="request()->routeIs('factories.*')">
+                {{ __('Fábricas') }}
             </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.*')">
+                {{ __('Artículos') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('address_shippings.index')" :active="request()->routeIs('address_shippings.*')">
+                {{ __('Direcciones de Envío') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.*')">
+                {{ __('Órdenes') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('order_lines.index')" :active="request()->routeIs('order_lines.*')">
+                {{ __('Líneas de Orden') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('factory_articles.index')" :active="request()->routeIs('factory_articles.*')">
+                {{ __('Artículos de Fábrica ') }}
+            </x-responsive-nav-link>
+
         </div>
 
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">

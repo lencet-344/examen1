@@ -23,7 +23,7 @@ Route::middleware(['auth', 'verified', 'prevent-back-history'])->group(function(
 });
 
 Route::resource('customers', CustomerController::class);
-Route::resource('categories', FactoryController::class);
+Route::resource('factories', FactoryController::class);
 Route::resource('articles', ArticleController::class);
 Route::resource('address_shippings', Address_shippingController::class);
 Route::resource('orders', OrderController::class);
