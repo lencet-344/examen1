@@ -11,7 +11,7 @@ use illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 
 
-class Address_shippinghController extends Controller
+class Address_shippingController extends Controller
 {
     /**
      * Display a listing of the resource.
