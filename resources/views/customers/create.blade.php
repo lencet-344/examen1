@@ -1,5 +1,5 @@
-<x_app-layout>
-    <-slot name="header">
+<x-app-layout>
+    <x-slot name="header">
     <div class="flex items-center justify-between">
         <h2 class="font-semibold text-2x1 text-gray-800 dark:text-gray-100 leading-tight tracking-tight">
             {{ __('crear_cliente') }}
