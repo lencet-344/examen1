@@ -23,14 +23,14 @@ class CustomerRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>"string|required||min:3|max:20",
-            'email'=>"string|required|min:3|max:30",
-            'telephone'=>"integer|required|unique",
-            'balance'=>"decimal|required",
-            'credit_balance'=>"decimal|required",
-            'discount'=>"string|required||min:3|max:25",
-            'date_record'=>"date|required|",
-            'state_customer'=>"string|required||min:3|max:30",
+            'name'=>'string','required','min:3','max:20',
+            'email'=>'string','required','min:3','max:30',
+            'telephone'=>'integer','required','unique',
+            'balance'=>'required',
+            'credit_balance'=>'required',
+            'discount'=>'string','required','min:3','max:25',
+            'date_record'=>'date','required',
+            'state_customer'=>'string','required','min:3','max:30',
         ];
     }
 
@@ -53,10 +53,10 @@ class CustomerRequest extends FormRequest
             'telephone.required'=>'El campo es requerido',
             'telephone.unique'=>'El numero debe ser unico',
 
-            'balance.decimal'=>'El campo permite numeros',
+            
             'balance.required'=>'El campo es requerido',
 
-            'credit_balance.decimal'=>'El campo permite numeros',
+            
             'credit_balance.required'=>'El campo es requerido',
 
             'discount.string'=>'El campo descuento solo permite caracteres',
