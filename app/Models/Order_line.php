@@ -17,4 +17,9 @@ class Order_line extends Model
     {
         return $this->belongsTo(Article::class);
     }
+
+    public function address_shipping()
+    {
+        return $this->belongsTo(Address_shipping::class);
+    }
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Address_shipping extends Model
 {
     protected $fillable=[
-        "id_customer",
+        "customer_id",
         "number",
         "street",
         "neighborhood",
@@ -24,5 +24,10 @@ class Address_shipping extends Model
     public function order()
     {
         return $this->belongsTo(Order::class);
+    }
+
+    public function order_lines()
+    {
+        return $this->hasMany(Order_line::class);
     }
 }

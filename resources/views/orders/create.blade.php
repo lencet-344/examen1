@@ -34,9 +34,9 @@
                     </div>
 
                     <div class="mb-6">
-                        <label for="Iva" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Iva</label>
-                        <input type="number" id="Iva" name="Iva" value="{{ old('Iva') }}" step="0.01" class="w-full rounded-xl border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring focus:ring-indigo-500 focus:ring-opacity-20 shadow-sm transition-colors">
-                        @error('Iva')
+                        <label for="iva" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Iva</label>
+                        <input type="number" id="iva" name="iva" value="{{ old('iva') }}" step="0.01" class="w-full rounded-xl border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring focus:ring-indigo-500 focus:ring-opacity-20 shadow-sm transition-colors">
+                        @error('iva')
                             <p class="mt-2 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
                         @enderror
                     </div>
@@ -86,29 +86,13 @@
                     </div>
 
                     <div class="mb-6">
-                        <label for="address_shipping_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Direccion</label>
+                        <label for="address_shipping_id" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Dirección</label>
                         <select id="address_shipping_id" name="address_shipping_id" class="w-full rounded-xl border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring focus:ring-indigo-500 focus:ring-opacity-20 shadow-sm transition-colors">
-                            <option value="">-- Seleccione un direccion --</option>
+                            <option value="">-- Seleccione una dirección --</option>
                             @foreach($addresses as $address)
                                 <option value="{{ $address->id }}" {{ old('address_shipping_id') == $address->id ? 'selected' : '' }}>
                                     {{ $address->street }}, {{ $address->city }}
                                 </option>
-                            @endforeach
-                        </select>
-                        @error('address_shipping_id')
-                            <p class="mt-2 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
-                        @enderror
-                    </div>
-
-                                </option>
-                            @endforeach
-                        </select>
-                        @error('category_id')
-                            <p class="mt-2 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
-                        @enderror
-                    </div>
-
-                    </option>
                             @endforeach
                         </select>
                         @error('address_shipping_id')
