@@ -23,14 +23,14 @@ class CustomerRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>'string','required','min:3','max:20',
-            'email'=>'string','required','min:3','max:30',
-            'telephone'=>'integer','required','unique',
+            'name'=>'string|required|min:3|max:20',
+            'email'=>'string|required|min:3|max:30|unique:customers,email,' . $this->route('customers'),
+            'telephone'=>'integer|required|unique:customers,telephone,' . $this->route('customers'),
             'balance'=>'required',
-            'credit_balance'=>'required',
-            'discount'=>'string','required','min:3','max:25',
-            'date_record'=>'date','required',
-            'state_customer'=>'string','required','min:3','max:30',
+            'credit_limit'=>'required',
+            'discount'=>'string|required|min:1|max:25',
+            'date_record'=>'date|required',
+            'state_customer'=>'string|required|min:3|max:30',
         ];
     }
 
@@ -54,14 +54,14 @@ class CustomerRequest extends FormRequest
             'telephone.unique'=>'El numero debe ser unico',
 
             
-            'balance.required'=>'El campo es requerido',
+            'balance.required'=>'El balance es requerido',
 
-            
-            'credit_balance.required'=>'El campo es requerido',
+
+            'credit_limit.required'=>'El Límite de crédito es requerido',
 
             'discount.string'=>'El campo descuento solo permite caracteres',
             'discount.required'=>'El campo es requerido',
-            'discount.min'=>'El minimo de caractesres es 3',
+            'discount.min'=>'El minimo de caracteres es 1',
             'discount.max'=>'El maximo de caracteres es 25',
 
             'date_record.date'=>'El campo solo permite fecha de ingreso',

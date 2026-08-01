@@ -11,7 +11,7 @@ class Customer extends Model
         "email",
         "telephone",
         "balance",
-        "credit_balance",
+        "credit_limit",
         "discount",
         "date_record",
         "state_customer"
