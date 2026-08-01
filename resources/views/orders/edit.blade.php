@@ -35,9 +35,9 @@
                     </div>
 
                     <div class="mb-6">
-                        <label for="Iva" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Iva</label>
-                        <input type="number" id="Iva" name="Iva" value="{{ old('Iva', $order->Iva) }}" step="0.01" class="w-full rounded-xl border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring focus:ring-indigo-500 focus:ring-opacity-20 shadow-sm transition-colors">
-                        @error('Iva')
+                        <label for="iva" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Iva</label>
+                        <input type="number" id="iva" name="iva" value="{{ old('iva', $order->iva) }}" step="0.01" class="w-full rounded-xl border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring focus:ring-indigo-500 focus:ring-opacity-20 shadow-sm transition-colors">
+                        @error('iva')
                             <p class="mt-2 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
                         @enderror
                     </div>
@@ -97,8 +97,6 @@
                         </select>
                         @error('address_shipping_id')
                             <p class="mt-2 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
-                        @enderror
-                    </div>
                         @enderror
                     </div>
 

@@ -26,4 +26,6 @@ class Address_shipping extends Model
     {
         return $this->belongsTo(Order_line::class);
     }
+
+    
 }

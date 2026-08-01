@@ -24,7 +24,7 @@ class Order_lineRequest extends FormRequest
     {
         return [
             'article_id'=>"required",
-            'quantity'=>'integer|required|unsigned',
+            'quantity'=>'integer|required',
             'price'=>"required",
             'subtotal_line'=>"required",
         ];

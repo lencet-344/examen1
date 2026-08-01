@@ -14,7 +14,7 @@
         <div class="max-w-2xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-2xl border border-gray-100 dark:border-gray-700 p-8">
                 
-                <form action="{{ route('order_lines.update', $order_line) }}" method="POST" id="form-edit-{{ $order_line->id }}" onsubmit="confirmarActualizacion(event, {{ $order_lines->id }})" novalidate>
+                <form action="{{ route('order_lines.update', $order_line) }}" method="POST" id="form-edit-{{ $order_line->id }}" onsubmit="confirmarActualizacion(event, {{ $order_line->id }})" novalidate>
                     @csrf
                     @method('PUT')
                     

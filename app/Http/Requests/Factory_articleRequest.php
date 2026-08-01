@@ -24,8 +24,8 @@ class Factory_articleRequest extends FormRequest
     {
         return [
             'article_id'=>"required",
-            'current_stock'=>'integer|required|unsigned',
-            'negotiation_cost'=>'integer|required|unsigned',
+            'current_stock'=>'integer|required',
+            'negotiation_cost'=>'integer|required',
             'date_estimated'=>"date|required|",
         ];
     }
