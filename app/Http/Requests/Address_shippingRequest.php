@@ -24,7 +24,7 @@ class Address_shippingRequest extends FormRequest
     {
         return [
             'customer_id'=>"required",
-            'number'=>"decimal|required",
+            'number'=>"required",
             'street'=>"string|required||min:3|max:20",
             'neighborhood'=>"string|required||min:3|max:20",
             'city'=>"string|required||min:3|max:20",
@@ -37,9 +37,11 @@ class Address_shippingRequest extends FormRequest
     public function messages():array
     {
         return[
-            'customer_id.required'=>'El campo es requerido',
+            
+            'customer_id' => 'required|exists:customers,id',
+            'number' => 'required|string|max:255',
+            'street' => 'required|string|max:255',
 
-            'number.decimal'=>'El campo permite numeros',
             'number.required'=>'El campo es requerido',
 
             'street.string'=>'El nombre de la calle solo permite caracteres',
