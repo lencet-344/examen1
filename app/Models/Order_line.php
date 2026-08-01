@@ -18,8 +18,8 @@ class Order_line extends Model
         return $this->belongsTo(Article::class);
     }
 
-    public function address_shipping()
+    public function address_shippings()
     {
-        return $this->belongsTo(Address_shipping::class);
+        return $this->hasMany(Address_shipping::class);
     }
 }

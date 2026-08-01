@@ -83,7 +83,8 @@
                                             <a href="{{ route('address_shippings.edit', $address_shipping) }}" class="text-gray-400 hover:text-amber-500 transition-colors" title="Editar">
                                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
                                             </a>
-                                            <form action="{{ route('address_shippings.destroy', $address_shipping) }}" method="POST" class="inline" id="form-delete-{{ $order_lines->id }}">
+                                            <!-- Aquí estaba el error, ya corregido a $address_shipping->id -->
+                                            <form action="{{ route('address_shippings.destroy', $address_shipping) }}" method="POST" class="inline" id="form-delete-{{ $address_shipping->id }}">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="button" onclick="confirmarEliminacion({{ $address_shipping->id }})" class="text-gray-400 hover:text-red-500 transition-colors" title="Eliminar">
@@ -95,7 +96,8 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="4" class="px-6 py-12 text-center">
+                                    <!-- Corregido el colspan de 4 a 8 para abarcar toda la tabla -->
+                                    <td colspan="8" class="px-6 py-12 text-center">
                                         <div class="flex flex-col items-center">
                                             <svg class="w-12 h-12 text-gray-300 dark:text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                                             <p class="text-gray-500 dark:text-gray-400 text-lg font-medium">No hay direccion de pedido</p>
@@ -140,4 +142,3 @@
         }
     </script>
 </x-app-layout>
-

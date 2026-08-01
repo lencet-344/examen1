@@ -23,6 +23,11 @@ return new class extends Migration
             $table->integer("customer_id")->unsigned();
             $table->foreign("customer_id")->references("id")->on("customers")->onDelete("cascade")->onUpdate("cascade");
 
+            $table->integer("order_line_id")->unsigned();
+            $table->foreign("order_line_id")->references("id")->on("order_lines")->onDelete("cascade")->onUpdate("cascade");
+
+
+
 
             $table->timestamps();
         });

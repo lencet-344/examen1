@@ -25,8 +25,8 @@ class Order_lineRequest extends FormRequest
         return [
             'article_id'=>"required",
             'quantity'=>'integer|required|unsigned',
-            'price'=>"decimal|required",
-            'subtotal_line'=>"decimal|required",
+            'price'=>"required",
+            'subtotal_line'=>"required",
         ];
     }
 
@@ -40,10 +40,9 @@ class Order_lineRequest extends FormRequest
             'quantity.required'=>'El campo es requerido',
             'quantity.unsigned'=>'El campo solo permite numeros enteros',
 
-            'price.decimal'=>'El campo permite numeros',
+            
             'price.required'=>'El campo es requerido',
 
-            'subtotal_line.decimal'=>'El campo permite numeros',
             'subtotal_line.required'=>'El campo es requerido',
             
         ];
