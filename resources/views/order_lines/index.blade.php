@@ -4,7 +4,6 @@
             <h2 class="font-semibold text-2xl text-gray-800 dark:text-gray-100 leading-tight tracking-tight">
                 {{ __('Líneas de Pedido') }}
             </h2>
-            <!-- Corregido: order_lines.create -->
             <a href="{{ route('order_lines.create') }}" class="inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-xl font-semibold text-xs text-white uppercase tracking-widest hover:bg-indigo-700 focus:bg-indigo-700 active:bg-indigo-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 shadow-lg shadow-indigo-500/30">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                 Nueva línea de pedido
@@ -24,21 +23,19 @@
                                 <th class="px-6 py-4 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Cantidad</th>
                                 <th class="px-6 py-4 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Precio</th>
                                 <th class="px-6 py-4 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Subtotal</th>
-                                <!-- Agregado este th para equilibrar las 7 columnas de la tabla -->
-                                <th class="px-6 py-4 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Categoría</th>
                                 <th class="px-6 py-4 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider text-right">Acciones</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
-                            <!-- Corregido: $order_lines en lugar de $orders_lines -->
                             @forelse ($order_lines as $order_line)
                                 <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors group">
                                     <td class="px-6 py-4">
                                         <span class="text-sm font-mono text-gray-400 dark:text-gray-500">{{ $order_line->id }}</span>
                                     </td>
+                                    
                                     <td class="px-6 py-4">
                                         <div class="text-sm font-semibold text-gray-900 dark:text-white">
-                                            {{ $order_line->article->name ?? 'Sin artículo' }}
+                                            {{ $order_line->article->description ?? ($order_line->article->name ?? 'Sin Artículo') }}
                                         </div>
                                     </td>
 
@@ -60,11 +57,6 @@
                                         </div>
                                     </td>
 
-                                    <td class="px-6 py-4">
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400">
-                                            {{ $order_line->article->name ?? 'Sin categoría' }}
-                                        </span>
-                                    </td>
                                     <td class="px-6 py-4 text-right">
                                         <div class="flex justify-end items-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity">
                                             <a href="{{ route('order_lines.show', $order_line) }}" class="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" title="Ver">
@@ -85,8 +77,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <!-- Corregido el colspan de 4 a 7 para abarcar toda la tabla -->
-                                    <td colspan="7" class="px-6 py-12 text-center">
+                                    <td colspan="6" class="px-6 py-12 text-center">
                                         <div class="flex flex-col items-center">
                                             <svg class="w-12 h-12 text-gray-300 dark:text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                                             <p class="text-gray-500 dark:text-gray-400 text-lg font-medium">No hay líneas de pedido registradas</p>
